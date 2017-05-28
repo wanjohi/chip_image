@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p> Select two images and click submit:
+
+<form name = "form" enctype = "multipart/form-data" 
+   method = "POST" >{% csrf_token %}
+  First Image:<br>
+  <input type="file" name="pic1">
+  <br>
+  Second Image:<br>
+  <input type="file" name="pic2">
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

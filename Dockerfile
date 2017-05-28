@@ -16,11 +16,10 @@ RUN apt-get update
 RUN apt-get install -y  pkg-config libpng12-0 \ 
 	libpng12-dev libpng++-dev libpng3 \
 	libpnglite-dev python-opencv build-essential cmake \
-	python-matplotlib python-setuptools
+	python-imaging python-matplotlib python-setuptools
 
 RUN mkdir /code
 WORKDIR /code
 ADD reqs.txt /code/
-RUN easy_install -U distribute
 RUN pip install -r reqs.txt
 ADD . /code/
